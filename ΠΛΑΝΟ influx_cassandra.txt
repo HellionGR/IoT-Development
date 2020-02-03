@@ -1,0 +1,51 @@
+CREATE TABLE arduino_sensors  (
+       station_id             text,
+       greenhouse_owner_id    text,
+       greenhouse_id          text,
+       greenhouse_location_id text,
+       station_place_id       text,
+       temperature            text,
+       humidity               text,
+       luminosity             text,
+       event_time             timestamp,
+       PRIMARY KEY            (station_id, event_time)
+);
+
+
+
+INSERT temperature,station_id=15,greenhouse_owner_id=2,greenhouse_id=1,greenhouse_location_id=1,station_place_id=1 value=30
+
+INSERT Temperature,station_id=15,greenhouse_owner_id=LOKAS,greenhouse_id=TEI,greenhouse_location_id=LARISA,station_place_id=MAIN temperature=30,humidity=65,Light Intensity=960
+INSERT Temperature,station_id=15,greenhouse_owner_id=PAPAIOANOU,greenhouse_id=GIANNOULI,greenhouse_location_id=LARISA,station_place_id=MAIN temperature=37,humidity=65,Light Intensity=960
+
+DROP SERIES FROM /.*/
+DROP DATABASE ()
+
+CREATE DATABASE GREENHOUSE_SENSORS
+SHOW DATABASES
+USE GREENHOUSE_SENSORS
+
+INSERT ARDUINO_SENSOR,station_id=15,greenhouse_owner_id=PAPAIOANOU,greenhouse_id=GIANNOULI,greenhouse_location_id=LARISA,station_place_id=MAIN TEMPERATURE=37,HUMIDITY=65,LUMINOSITY=960
+INSERT ARDUINO_SENSOR,station_id=16,greenhouse_owner_id=LOKAS,greenhouse_id=TEI,greenhouse_location_id=LARISA,station_place_id=MAIN TEMPERATURE=34,HUMIDITY=60,LUMINOSITY=945
+
+SELECT * FROM "ARDUINO_SENSOR"\
+\
+
+CASSANDRA
+
+CREATE KEYSPACE                           CREATE  KEYSPACE [IF NOT EXISTS] keyspace_name 
+   WITH REPLICATION = { 
+      'class' : 'SimpleStrategy', 'replication_factor' : 1 } 
+DESCRIBE KEYSPACE
+USE KEYSPACE
+CREATE TABLE
+INSERT INTO ARDUINO_SENSOR(station_id,greenhouse_owner_id,greenhouse_id,greenhouse_location_id,station_place_id,event_time,temperature,humidity,luminosity)
+
+
+
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('15','0','GIANOULI','LARISA','PAPAIOANOU','MAIN','37','65','960')USING TTL 86400 AND TIMESTAMP 123456789;
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('16','0','TEI','LARISA','LOKAS','MAIN','30','65','960')USING TTL 86400 AND TIMESTAMP 123456789;
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event_time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('16','0','TEI','LARISA','LOKAS','MAIN','30','65','960')USING TTL 86400 AND TIMESTAMP 123456789;
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event_time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('21','0','POTAMI','TRIKALA','LOKAS','MAIN','35','68','940')USING TTL 86400 AND TIMESTAMP 123456789;
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event_time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('23','0','POTAMI','TRIKALA','BENTZAS','MAIN','35','66','950')USING TTL 86400 AND TIMESTAMP 123456789;
+INSERT INTO GREENHOUSE_SENSORS.ARDUINO_SENSORS(station_id,event_time,greenhouse_id,greenhouse_location_id,greenhouse_owner_id,station_place_id,temperature,humidity,luminosity) VALUES('31','0','TEI','LARISA','LOKAS','MAIN','30','65','960')USING TTL 86400 AND TIMESTAMP 123456789;
